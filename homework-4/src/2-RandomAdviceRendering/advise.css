@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+  margin: 0;
+}
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn {
+  background: linear-gradient(
+    135deg,
+    #3498db,
+    #8e44ad
+  ); /* Gradient background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  padding: 15px 30px; /* Padding inside the button */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  align-self: center;
+}
+
+/* Hover effect for button */
+.btn:hover {
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+/* Focus effect (when clicked) */
+.btn:focus {
+  outline: none; /* Remove default outline */
+}
+
+/* Active effect (when pressed) */
+.btn:active {
+  transform: translateY(2px); /* Slight press down effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow when pressed */
+}
